@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/index.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="Java Script/risultatoForm.js"></script>
+</head>
+<body>
+
+    <nav id="nav" >
+        <script src="Java Script/loadNavFoot.js"></script>
+      </nav>
+
+<section class="Form">
+<h1>Inviaci le tue domande</h1>
+<br/>
+<form id="risultati" action="risultatoForm.html" method="get" onsubmit="return stampaRisulati(this)">
+<fieldset>
+    <legend class="formTitolo">Dati anagrafici</legend>
+
+    <label for="inputNome" >Nome</label>
+    <input type="text" name="Nome" id="inputNome" placeholder="Inserisci Nome">
+<br/>
+<label for="inputCognome">Cognome</label>
+<input type="text" name="Cognome" id="inputCognome" placeholder="Inserisci Cognome">
+<br/>
+<label for="dataNascita">Data di Nascita</label>
+    <input type="date" name="Data Nascita" id="dataNascita"/>
+<br/>
+<br/>
+</fieldset>
+<fieldset>
+    <legend class="formTitolo">Dati indagine</legend>
+    <br/>
+    <input type="radio" name="Genere" id="sceltaGenereA" value="Altro"/>
+    <label for="sceltaGenereA">Altro</label> <br/>
+    <input type="radio"name="Genere" id="sceltaGenereF" value="Femmina"/>
+    <label for="sceltaGenereF">Femmina</label><br/>
+    <input type="radio"name="Genere" id="sceltaGenereM" value="Maschio"/>
+    <label for="sceltaGenereM">Maschio</label>
+    <br/>
+    <br/>
+    <legend class="formTitolo">A quale corso è interessato/a?</legend>
+    <input type="checkbox" name="Corso" id="sceltaCorsoR" value="Regia"/>
+    <label for="sceltaCorsoR">Regia</label>  <br/>
+<input type="checkbox" name="Corso" id="sceltaCorsoS" value="Sceneggiatura"/>
+    <label for="sceltaCorsoS">Sceneggiatura</label>  <br/>
+<input type="checkbox" name="Corso" id="sceltaCorsoD" value="Doppiaggio"/>
+    <label for="sceltaCorsoD">Doppiaggio</label>  <br/>
+<input type="checkbox" name="Corso" id="sceltaCorsoRec" value="Recitazione"/>
+    <label for="sceltaCorsoREC">Recitazione</label>  <br/>
+<input type="checkbox" name="Corso" id="sceltaCorsoF" value="FilmMaking"/>
+    <label for="sceltaCorsoF">Film Making</label>  <br/>
+<input type="checkbox" name="Corso" id=  "sceltaCorsoFot" value="Fotografia"/>
+    <label for="sceltaCorsoFot">Fotografia</label>  <br/>
+<input type="checkbox" name="Corso" id="sceltaCorsoMak" value="Trucco Cinematografico"/>
+    <label for="sceltaCorsoMak">Trucco Cinematografico</label>  <br/>
+<br/>
+<legend class="formTitolo">A quale sede è interessato/a?</legend>
+    <input type="checkbox" name="Sede" id="sceltaSedeS" value="Saint Honorè"/>
+    <label for="sceltaSedeS">Saint Honorè</label>  <br/>
+<input type="checkbox" name="Sede" id="sceltaSedeC" value="Crema"/>
+    <label for="sceltaSedeC">Crema</label>  <br/>
+<input type="checkbox" name="Sede" id="sceltaSedeV" value="Viennetta"/>
+    <label for="sceltaSedeV">Viennetta</label>  <br/>
+<input type="checkbox" name="Sede" id="sceltaSedeB" value="Biscuitville"/>
+    <label for="sceltaSedeB">Biscuitville</label>  <br/>
+</fieldset>
+
+</fieldset>
+<fieldset>
+    <legend class="formTitolo">I tuoi contatti</legend>
+<label for="e-mail"> Inserisci Posta eletronnica</label>
+<input type="email" name="E-mail" id="e-mail"/>
+<br/>
+<label for="numero"> Inserisci numero di telefono</label>
+<input type="" name="Numero" id="numero"/>
+<br/>
+<br/>
+</fieldset>
+<fieldset>
+    <legend class="formTitolo">Il tuo messaggio</legend>
+    <label for="messaggio">Inserisci il tuo messaggio:</label><br>
+    <textarea id="messaggio" name="Messaggio" rows="4" cols="50"></textarea>
+</fieldset>
+<button type="submit" onclick="xxxxx">Invia</button>
+<button type="reset">Reset</button>
+
+
+</form>
+</section>
+<footer id="footer">
+    <script src="Java Script/loadNavFoot.js"></script>
+  </footer>
+  
+  <script src="Java Script/index.js"></script>
+
+</body>
+</html>

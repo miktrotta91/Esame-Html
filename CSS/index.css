@@ -1,0 +1,462 @@
+/*Formattazione elementi pagina Web
+*/
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* gestisce il contenuto che super i bordi orizzontali*/
+}
+/* Stile del corpo della pagina*/
+body{
+    min-height: 100vh;
+    background-color:white ;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav{
+    background-color: rgb(68, 111, 211);
+    box-shadow: 3px 3px 5px rgb(0, 0, 0,0.1);
+   
+}
+nav ul{
+    width:100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li{
+    height: 150px;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size:larger;
+}
+nav a:hover{
+    background-color:#f0f0f0 ;
+}
+nav li:first-child{
+    margin-right: auto;
+}
+
+/*Barra laterale*/
+.sidebar{
+   position: fixed;
+   top: 0;
+    right: 0;
+    height: 100vh;
+    width:250px;
+    z-index:999 ;
+    background-color: rgba(255, 255, 255, 0.577);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgb(0, 0, 0,0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+.menu-button{
+    display: none;
+}
+
+/* la side bar si attiverà se vengono rispettate se seguenti parti*/
+@media(max-width:800px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+       display: block; 
+    }
+}
+@media(max-width:400px){
+    .sidebar{
+        width: 100%;
+    }
+}
+.logo{
+    height: 150px;
+    position: absolute;
+    left: 10px;
+    display: flex;
+}
+
+/* selezione lingua*/
+.eng{
+    display: flex;
+}
+.ita{
+    display: flex;
+}
+
+/*
+Immagini che scorrono
+*/
+
+.container{
+    padding: 2rem;
+   
+}
+.slider-wrapper{
+    position:relative;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+.slider{
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0,0%,0%,0.25);
+    border-radius: 0.5rem;
+}
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+
+}
+.slider-nav{
+    display: flex;
+    column-gap:1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%; 
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.slider-nav a{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+.slider-nav a:hover{
+    opacity: 1;
+}
+
+.frase{
+    font-style:normal;
+    text-align: center;
+    font-size:x-large ;
+    margin-top: 10px
+}
+.rosso{
+    color: red;
+}
+.frase2{
+    font-style:normal;
+    text-align: center;
+    font-size:x-large ;
+    margin-top: 10px
+}
+
+/*footer
+*/
+footer{
+    background-color:rgb(68, 111, 211) ;
+}
+.footerContainer{
+    width:100% ;
+    padding:40px 30px 20px ;
+}
+.socialIcons{
+display:flex;
+justify-content: center;
+}
+ .socialIcons a{
+text-decoration: none;
+padding: 10px;
+background-color: white;
+margin: 10px;
+border-radius:100px;
+
+ }
+ .socialIcons a i{
+    font-size: 2rem;
+    color:black;
+    opacity: 0.9;
+    overflow: hidden;
+ }
+ .socialIcons a:hover{
+    background-color: #111;
+    transform: 0.5s;
+ }
+ .socialIcons a:hover i{
+color: white;
+transition: 0.5s;
+ }
+ .footerNav{
+    margin: 30px 0;
+ }
+ .footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+ }
+.footerNav ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font: size 1.3em; ;
+    opacity: 0.7;
+    transition: 0.5s
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+.footerBottom{
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p{
+    color: white;
+    
+}
+.designer{
+    opacity: 0.7;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media only screen and(max-width:800px){
+    .footerNav{
+        flex-direction: column;
+    }
+    .footerNav ul li{
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .Locandine{
+        display: block;
+    }
+}
+.Storia{
+    margin: 20px;
+  border: 2px solid rgb(68, 111, 211);
+  padding: 10px;
+  text-align: justify;
+}
+.Story{
+    margin: 20px;
+    border: 2px solid rgb(68, 111, 211);
+    padding: 10px;
+    text-align: justify;
+}
+.Locandine{
+    margin: 20px;
+  border: 2px solid rgb(68, 111, 211);
+  padding: 10px;
+  display: flex;
+  justify-content:space-around;
+  align-items:flex-start;
+}
+.Poster{
+    margin: 20px;
+    border: 2px solid rgb(68, 111, 211);
+    padding: 10px;
+    justify-content: space-between;
+    display: flex;
+}
+.Regia{
+    margin: 20px;
+    border: 2px solid rgb(68, 111, 211);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.Directing{
+    margin: 20px;
+    border: 2px solid rgb(68, 111, 211);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.Sceneggiatura{
+    margin: 20px;
+    border: 2px solid rgb(68, 111, 211);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+}
+.Screenwriting{
+    margin: 20px;
+    border: 2px solid rgb(68, 111, 211);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.Doppiaggio{
+    margin: 20px;
+    border: 2px solid rgb(68, 111, 211);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.Dubbing{
+    margin: 20px;
+    border: 2px solid rgb(68, 111, 211);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.FilmMaking{
+    margin: 20px;
+    border: 2px solid rgb(68, 111, 211);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.Film{
+    margin: 20px;
+    border: 2px solid rgb(68, 111, 211);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.Fotografia{
+    margin: 20px;
+    border: 2px solid rgb(68, 111, 211);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.Photography{
+    margin: 20px;
+    border: 2px solid rgb(68, 111, 211);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.Trucco{
+    margin: 20px;
+    border: 2px solid rgb(68, 111, 211);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.MakeUp{
+    margin: 20px;
+    border: 2px solid rgb(68, 111, 211);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.Recitazione{
+    margin: 20px;
+    border: 2px solid rgb(68, 111, 211);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.Acting{
+    margin: 20px;
+    border: 2px solid rgb(68, 111, 211);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.titolo{
+    margin: 20px;
+    text-align: justify; 
+}
+ .title{
+  margin: 20px;
+  text-align: justify;
+ }
+ h2{
+    font-size: small;
+ }
+ /*FORM
+ */
+ .Form{
+    margin: 20px;
+    border: 2px solid rgb(68, 111, 211);
+    text-align: justify;
+    padding: 5%;
+    fieldset{
+        padding: 10px;
+    }
+    
+ }
+ .Form2{
+    margin: 20px;
+    border: 2px solid rgb(68, 111, 211);
+    text-align: justify;
+    padding: 5%;
+      fieldset{
+        padding: 10px;
+    }
+ }
+ .formTitolo{
+font-weight:bold ;
+ }
+
+ .icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+ }
+ /* Stile per l'icona */
+.icon svg {
+    width: 5%;
+    height: 10%;
+    fill: #333; /* Colore dell'icona */
+}
+
+.showIcon{
+    width: 100%;
+    height: 40vh;
+    margin-bottom: 5px;
+    display: flex;
+   text-align: center;
+   align-content: space-between;
+}
+.linkCorsi{
+    display: flex;
+    justify-content: center;
+}
